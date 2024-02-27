@@ -2,7 +2,7 @@ version: "3.8"
 services:
 
   # httpd-Apache
-  php:
+  typo3:
     build:
       context: ./docker/httpd/
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
     ports:
       - ${APP_DEFAULT_PORT}
     volumes:
-      - ./:/var/www/html
+      - ./src:/var/www/html
     env_file:
       - docker/httpd/httpd.env
 
@@ -25,13 +25,15 @@ services:
       dockerfile: ./docker/mysql/Dockerfile
     container_name: ${DB_CONTAINER_NAME}
     volumes:
-      - db-volume:/var/lib/mysql
+      - db-volume2:/var/lib/mysql
     ports:
       - ${DB_DEFAULT_PORT}
     restart: unless-stopped
     environment:
-      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 1
-      MYSQL_DATABASE: ${DATABASE_NAME}
+      MARIADB_USER: ${MARIADB_USER}
+      MARIADB_PASSWORD: ${MARIADB_PASSWORD}
+      MARIADB_DATABASE: ${MARIADB_DATABASE}
+      MARIADB_ROOT_PASSWORD: ${MARIADB_PASSWORD}
 
 volumes:
-  db-volume:
+  db-volume2:
