@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7315fd7b284f56d5861afec7a26a568",
+    "content-hash": "82cd2379a4dd69bcb511924ff2c57c38",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -4998,6 +4998,36 @@
             "time": "2024-01-23T14:51:35+00:00"
         },
         {
+            "name": "toumeh/cars",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "source/extensions/cars",
+                "reference": "d05fd149baccb3fcfc46e97ec633f3a11a87d91c"
+            },
+            "require": {
+                "typo3/cms-core": "^11.5 || ^12.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "cars"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Toumeh\\Cars\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "list and show cars",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "typo3/class-alias-loader",
             "version": "v1.1.4",
             "source": {
@@ -6950,10 +6980,74 @@
             "time": "2022-06-03T18:03:27+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "b13/make",
+            "version": "0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/b13/make.git",
+                "reference": "ae01a4c86973e77391370ec10bc16f531ae48ec6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/b13/make/zipball/ae01a4c86973e77391370ec10bc16f531ae48ec6",
+                "reference": "ae01a4c86973e77391370ec10bc16f531ae48ec6",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^10.0 || ^11.0 || ^12.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.4",
+                "typo3/cms-core": "^11.5",
+                "typo3/coding-standards": "^0.5",
+                "typo3/tailor": "^1.4",
+                "typo3/testing-framework": "^7.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "make",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "B13\\Make\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Bartsch",
+                    "email": "oliver.bartsch@b13.com"
+                }
+            ],
+            "description": "Kickstarter CLI tool for various TYPO3 functionalities",
+            "homepage": "https://b13.com",
+            "keywords": [
+                "cli",
+                "extensions",
+                "kickstarter",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/b13/make/issues",
+                "source": "https://github.com/b13/make/tree/0.1.7"
+            },
+            "time": "2023-08-09T20:23:55+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "toumeh/cars": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
