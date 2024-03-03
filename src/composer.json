@@ -14,7 +14,6 @@
 		"sort-packages": true
 	},
 	"require": {
-		"decent/cars": "@dev",
 		"typo3/cms-backend": "^12.4.0",
 		"typo3/cms-belog": "^12.4.0",
 		"typo3/cms-beuser": "^12.4.0",
@@ -40,15 +39,5 @@
 		"typo3/cms-tstemplate": "^12.4.0",
 		"typo3/cms-viewpage": "^12.4.0",
 		"typo3/cms-webhooks": "^12.4.0"
-	},
-	"require-dev": {
-		"b13/make": "^0.1.7",
-		"typo3/cms-styleguide": "^12.0"
-	},
-	"repositories": {
-		"0_packages": {
-			"type": "path",
-			"url": "Source/Extensions/*"
-		}
 	}
 }
